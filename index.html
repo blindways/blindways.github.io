@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="BlindWays">
+  <meta name="keywords" content="Blind Navigation, Text to Motion">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BlindWays: Text-Motion Dataset for Blind Participants</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="shortcut icon" href="./favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <meta property="og:site_name" content="BlindWays: Text-Motion Dataset for Blind Participants" />
+  <meta property="og:type" content="video.other" />
+  <meta property="og:title" content="BlindWays: Text-Motion Dataset for Blind Participants" />
+<!--   <meta property="og:description" content="Sengupta, et al. UniLCD: Unified Local-Cloud Decision-Making via Reinforcement Learning." /> -->
+
+<!--   <meta name="twitter:card" content="summary_large_image" /> -->
+<!--   <meta name="twitter:title" content="UniLCD: Unified Local-Cloud Decision-Making via Reinforcement Learning" /> -->
+<!--   <meta name="twitter:description" content="Sengupta, et al. UniLCD: Unified Local-Cloud Decision-Making via Reinforcement Learning." /> -->
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">BlindWays: Text-Motion Dataset for Blind Participants</h1>
+<!--             <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://diasengupta.github.io/">Kathakoli Sengupta</a>&emsp;
+                <a href="https://www.linkedin.com/in/sgzk/">Zhongkai Shagguan</a>&emsp;
+                <a href="https://www.linkedin.com/in/sandeshbharadwaj97/">Sandesh Bharadwaj</a>&emsp;
+                <a href="https://research.redhat.com/blog/project_member/sanjay-arora/">Sanjay Arora</a>&dagger;&emsp;
+                <a href="https://eshed1.github.io/">Eshed Ohn-Bar</a>&emsp;
+                <a href="https://cpslab.bu.edu/ ">Renato Mancuso</a>&emsp;
+                <br />Boston University RedHat&dagger;
+                <span class="brmod"></span>ECCV 2024</span>
+            </div> -->
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="#method_video" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+<!--                 <span class="link-block">
+                  <a href="https://github.com/DIASENGUPTA/UniLCD" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a> 
+                </span> -->
+                <!-- Data Link. -->
+                <span class="link-block">
+                  <a href="https://drive.google.com/drive/folders/1UHtQwS6-JMnqHMP6q11nub-BR2lBrZYv?usp=share_link" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-database"></i>
+                    </span>
+                    <span>Data</span>
+                  </a>
+                </span>
+                <!-- Data Link. -->
+<!--                 <span class="link-block">
+                  <a href="https://drive.google.com/file/d/1KYA01bB1ZRck-55Y9jUsxJQWa0AWiRLy/view?usp=share_link" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-alt"></i>
+                    </span>
+                    <span>Supplementary Material</span>
+                  </a> -->
+                </span> 
+                <!-- Slides Link. -->
+                <!-- <span class="link-block">
+                <a href="TODO"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-powerpoint"></i>
+                  </span>
+                  <span>Slides</span>
+                  </a>
+              </span> -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="hero teaser">
+  <div class="hero-body">
+    <div class="columns is-centered">
+      <div class="column is-6">
+        <img src="./resources/example1.gif" />
+        <h2 class="subtitle has-text-centered">
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+ -->
+
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              People who are blind perceive the world differently than those who are sighted.
+              This often translates to different motion characteristics; for instance, when 
+              crossing at an intersection, blind individuals may move in ways that could 
+              potentially be more dangerous, eg, exhibit higher veering from the path and 
+              employ touch-based exploration around curbs and obstacles that may seem 
+              unpredictable. Yet, the ability of 3D motion models to model such behavior 
+              has not been previously studied, as existing datasets for 3D human motion 
+              currently lack diversity and are biased toward people who are sighted. In this 
+              work, we introduce BlindWays, the first multimodal motion benchmark for 
+              pedestrians who are blind. We collect 3D motion data using wearable sensors 
+              with 11 blind participants navigating eight different routes in a real-world 
+              urban setting. Additionally, we provide rich textual descriptions that capture 
+              the distinctive movement characteristics of blind pedestrians and their 
+              interactions with both the navigation aid (eg, a white cane or a guide dog) 
+              and the environment. We benchmark state-of-the-art 3D human prediction models, 
+              finding poor performance with off-the-shelf and pre-training-based methods for 
+              our novel task. To contribute toward safer and more reliable autonomous systems 
+              that reason over diverse human movements in their environments, here is the public 
+              release of our novel text-and-motion benchmark. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds">
+          <h2 class="title is-3">Data Organisation</h2>
+          <div class="content has-text-justified">
+            <p>
+              This dataset contains contributions from 11 blind participants, labeled as P0, P1, and so on. Below is a brief overview of its structure:
+              <ul>
+                <li>Motion Data: The motion data for each participant, collected over 8 different routes, is stored in the Motion folder. This (num_frame X 23 X 3) joints data includes detailed information about their movements captured via Xsens motion capture sensors.</li>
+                <li>Annotations: Annotations were collected from both expert and novice annotators, providing high-level and low-level descriptions of each motion sequence. These annotations are stored in the Annotations folder.</li>
+                <li>croissant.json: Metadata for our dataset.</li>
+              </ul>
+            </p>
+          Directory Organisation of BlindWays:
+            <ul>
+              <p>
+              <li>BlindWays
+                <ul>
+                  <li>Motion
+                    <ul>
+                      <li>P0_0001.npy</li>
+                      <li>P0_0002.npy</li>
+                      <li>...</li>
+                      <li>P10_0001.npy</li>
+                      <li>...</li>
+                    </ul>
+                  </li>
+                  <li>Annotations
+                    <ul>
+                      <li>P0_0001.json</li>
+                      <li>P0_0002.json</li>
+                      <li>...</li>
+                      <li>P10_0001.json</li>
+                      <li>...</li>
+                    </ul>
+                  </li>
+                  <li>croissant.json</li>
+                </ul>
+              </li>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Paper video. -->
+    <br />
+    <br />
+    <div id="method_video" class="columns is-centered has-text-centered">
+      <div class="column is-half">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <video controls>
+            <source src="./resources/BlindWays_Supplementary_Video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+
+  </section>
+
+
+<!--   <section class="section">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Motivation</h2>
+          <div class="content has-text-justified">
+            <p>
+              To ease the challenging sensorimotor agent training task, recent approaches decompose the task into
+              stages, by first training a privileged network with complete knowledge of the world and distilling its
+              knowledge into a less capable student network. However, current distillation methods for sensorimotor
+              agents result in <b>suboptimal driving behavior</b> due to <b>inherent differences between the inputs,
+                modeling
+                capacity</b>, and <b>optimization processes of the two agents.</b> </p>
+            </p>
+            <div class="column">
+              <img src="./resources/lbc_diagram.png" />
+            </div>
+
+            <div class="content has-text-centered">
+              <i>Chen, et al. CoRL 2020</i>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-justified">
+            We develop a novel deep distillation scheme that can address these
+            limitations and close the gap between the sensorimotor agent and its
+            privileged teacher. We achieve this by
+
+            <ol>
+              <li><b>Effective Teacher</b>: We propose to incorporate explicit safety-aware cues
+                into the BEV space that facilitate a surprisingly effective teacher agent
+                design. We demonstrate our learned agent to match expert- level decisionmaking.</li>
+
+              <li><b>Teachable Student via Alignment</b>: An IPM-based transformer alignment
+                module can facilitate direct distillation of most of the teacher’s features and
+                better guide the student learning process.</li>
+
+              <li><b>Student-paced Coaching</b>: A coaching mechanism for managing difficult
+                samples can scaffold knowledge and lead to improved model optimization
+                by better considering the ability of the student.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-4" align="left">Effective Teacher</h2>
+          <div class="content has-text-justified">
+            Given the low performance of prior privileged agents, the teacher could benefit from more <b>explicit
+            safety-driven cues in the BEV</b>. We propose to add two types of channels of predicted agents’ future and
+            entity attention. We first utilize a kinematics bicycle model to predict future trajectories of dynamic
+            objects, which enables us to iteratively predict and represent short-term future position, orientation, and
+            speed of agent. Then, we encode an explicit attention channel for highlighting potential future infractions.
+            Our boosted teacher agent even improves over the rule-based expert.
+
+          </div>
+          <div class="column">
+            <img src="./resources/bev_figure.png" width="80%" />
+          </div>
+        </div>
+      </div>
+
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-4" align="left">Teachable student via Alignment</h2>
+          <div class="content has-text-justified">
+            Due to the difference between inputs and modeling capacities, it can be difficult to align the image-based
+            student features and output with the BEV-based privileged teacher. Therefore, we proposed an <b>IPM-based
+              transformer alignment module</b> that can facilitate direct distillation of most of the teacher’s features
+            and better
+            guide the student learning process.
+          </div>
+          <div class="column">
+            <img src="./resources/figure1_crop.png" width="80%" />
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-4" align="left">Student-paced Coaching</h2>
+          <div class="content has-text-justified">
+            To better consider the learning ability of the student, we gradually coach the student with a student-paced
+            coaching mechanism. Specifically, we interpolate between teacher features and student features on samples
+            that the student performed poorly (i.e. higher loss). This effectively adjusts the learning rate in a
+            sample-selective manner, which aims to stabilize training by reducing the difficulty when the student is
+            unable to perform the optimal action.
+          </div>
+
+          <div class="column">
+            <img src="./resources/student_pace.png" width="50%" />
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-4" align="left">Model Architecture of CaT</h2>
+          <div class="content has-text-justified">
+            <p>
+              Our proposed CaT framework
+              enables highly effective knowledge transfer between a privileged
+              teacher and a sensorimotor (i.e., image-based) student.
+
+              Specifically, we first sample queries using a spatial parameterization of the BEV space and process them
+              with a self-attention module. Then, a deformable cross-attention module is applied to populate the
+              student’s BEV features.
+
+              The residual blocks following the alignment module can consequently facilitate knowledge transfer via
+              direct distillation of most of the teacher’s features.
+
+
+              Our optimization objective for guiding the distillation process is a weighted sum over both distillation
+              and auxiliary tasks, including output distillation loss, feature distillation loss, segmentation loss and
+              command prediction loss.
+            </p>
+            <div class="column">
+              <img src="./resources/method.png" />
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Result</h2>
+          <div class="content has-text-justified">
+            We present our closed-loop evaluation results on the Longest-6 Benchmark in CARLA. As illustrated in the
+            table below, CaT is able to achieve state of the art performance among all prior agents, including lidar
+            based
+            approaches. Moreover, we note that our privileged BEV agent learned by imitation with history and desired
+            path, agent forecast, and entity attention even outperforms the rule-based expert.
+          </div>
+          <div class="column">
+            <img src="./resources/results.png" width="80%" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Qualitative Examples</h2>
+            <video controls>
+            <source src="./resources/CaT_Video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section id=" BibTeX"">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">BibTeX</h2>
+          <div class="content has-text-justified">
+            <pre><code>@inproceedings{zhang2023coaching,
+        title={Coaching a Teachable Student},
+        author={Zhang, Jimuyang and Huang, Zanming and Ohn-Bar, Eshed},
+        booktitle={CVPR},
+        year={2023}
+}</code></pre>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+<!--   <section class="section id=" BibTeX"">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">Acknowledgments</h2>
+          <div class="content has-text-centered">
+            We thank the Red Hat Collaboratory
+            for supporting this research.
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+<!--         <a href="./resources/CaT.pdf" class="large-font bottom_buttons">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a href="TODO" class="large-font bottom_buttons">
+          <i class="fab fa-github"></i>
+        </a> -->
+        <br />
+        <p>Page template borrowed from <a href="https://nerfies.github.io/"><span class="dnerf">D-NeRF</span></a>.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
